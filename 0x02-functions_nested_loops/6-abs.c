@@ -4,17 +4,16 @@
  * _abs - Prints the absolute value of a number.
  * @n: The number whose abs value will be printed.
  *
- * Return: 0 Always
+ * Return: the absolute value of the number
  */
 int _abs(int n)
 {
 	if (n >= 0)
 	{
-		_putchar(n);
+		return (n);
 	}
 	else
 	{
-		_putchar(-n);
+		return (-1 * n);
 	}
-	return (0);
 }
