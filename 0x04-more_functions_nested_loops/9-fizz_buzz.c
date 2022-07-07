@@ -25,10 +25,10 @@ int main(void)
 		}
 		else
 		{
-			printf(" ")
+			putchar(' ');
 		}
 	}
-	printf('\n');
+	putchar('\n');
 
 	return (0);
 }
