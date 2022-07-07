@@ -34,7 +34,7 @@ void print_number(int n)
 			i = i * 10;
 			x = x / 10;
 		}
-		while (i >= 0)
+		while (i > 1)
 		{
 			_putchar((y / i) + '0');
 			y = y % i;
