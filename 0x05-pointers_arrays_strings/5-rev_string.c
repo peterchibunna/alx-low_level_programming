@@ -9,10 +9,10 @@ void rev_string(char *s)
 	int len = 0;
 	char s1, s2;
 
-	for (; s[i] != '\0'; i++)
+	for (; s[len] != '\0'; len++)
 	{
 		/*_putchar(s[i]);*/
-		len += 1;
+		/*len += 1;*/
 	}
 	/*_putchar('\n');*/
 
@@ -25,8 +25,8 @@ void rev_string(char *s)
 
 		s[j] = s2;
 		s[i] = s1;
-		i += 1;
-		j -= 1;
+		i++;
+		j--;
 		/*_putchar(s[j]);*/
 	}
 	/*_putchar('\n');*/
