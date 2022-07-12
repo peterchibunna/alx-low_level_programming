@@ -5,19 +5,19 @@
  */
 void rev_string(char *s)
 {
-	int i = 0, j = 0;
-	int len = 0;
+	int len, i, j;
 	char s1, s2;
 
-	for (; s[len] != '\0'; len++)
+	for (len = 0; s[len] != '\0'; len++)
 	{
 		/*_putchar(s[i]);*/
 		/*len += 1;*/
 	}
 	/*_putchar('\n');*/
 
-	i = 0;
 	j = len - 1;
+	i = 0;
+
 	while (j > i)
 	{
 		s1 = s[i];
@@ -25,8 +25,8 @@ void rev_string(char *s)
 
 		s[j] = s2;
 		s[i] = s1;
-		i++;
 		j--;
+		i++;
 		/*_putchar(s[j]);*/
 	}
 	/*_putchar('\n');*/
