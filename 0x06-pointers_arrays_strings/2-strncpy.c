@@ -11,19 +11,23 @@ char *_strncpy(char *dest, char *src, int n)
 	int i = 0;
 	int j = 0;
 
-	for (; src[i] != '\0'; i++)
+	while (n > j)
 	{
-	} /* get the length of the source */
-
-	for (; src[j] != '\0'; j++)
-	{
-		if (n > j)
+		if (src[j] != '\0')
 		{
-			dest[j] = src[j];
-			/*i++;*/
+			dest[i] = src[j];
+			j++;
+			i++;
 		}
+		else
+		{
+			for (; j < n; j++)
+			{
+				dest[i] = '\0';
+				i++;
+			}
+		}
+
 	}
-
-
 	return (dest);
 }
