@@ -13,6 +13,8 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int test_prime(int n, int i);
 int is_palindrome(char *s);
+int _strlen(char *s, int i);
+int palindrome_tester(char *s, int st, int end);
 int wildcmp(char *s1, char *s2);
 
 #endif /* MAIN_H */
