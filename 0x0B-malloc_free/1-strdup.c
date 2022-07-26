@@ -3,7 +3,7 @@
 
 /**
  * *_strdup - function description
- * @*str: String Parameter
+ * @str: String Parameter
  * Return: pointer to the new allocated mem. space
  */
 
