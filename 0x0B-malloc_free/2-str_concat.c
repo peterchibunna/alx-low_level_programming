@@ -11,17 +11,17 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *alloc;
-	int i, j, k = 0;
+	int i = 0, j = 0, k = 0;
 
 	if (s1 != NULL)
 	{
-		for (i = 0; s1[i]; i++)
+		for (; s1[i]; i++)
 		{
 		}
 	}
 	if (s2 != NULL)
 	{
-		for (j = 0; s2[j]; j++)
+		for (; s2[j]; j++)
 		{
 		}
 	}
