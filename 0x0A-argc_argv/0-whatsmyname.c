@@ -3,7 +3,7 @@
  * main - function description
  * @argc: arg count
  * @argv: args vector
- * Return: success 
+ * Return: success
  */
 int main(int argc, char *argv[])
 {
