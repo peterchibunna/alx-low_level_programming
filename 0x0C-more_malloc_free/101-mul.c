@@ -9,6 +9,8 @@
 int main(int argc, char *argv[])
 {
 	int a, b, i, j;
+	char *eptr;
+	unsigned long result;
 
 	if (argc == 3)
 	{
@@ -32,10 +34,12 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		a = atoi(argv[1]);
-		b = atoi(argv[2]);
+		a = strtoul(argv[1], &eptr, 10);
+		b = strtoul(argv[2], &eptr, 10);
 
-		printf("%d\n", a * b);
+		result = a * b;
+
+		printf("%lu\n", result);
 		return (0);
 	}
 	else
