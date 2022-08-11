@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * print - Prints before main is executed
+ * exec - Executes before main is executed
  **/
 void exec(void) __attribute__ ((constructor));
 void exec(void)
