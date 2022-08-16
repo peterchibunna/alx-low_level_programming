@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * print_listint_safe - print a listint_t linked list
  * @head: head of the list
@@ -7,24 +8,31 @@
  **/
 size_t print_listint_safe(const listint_t *head)
 {
-	int i;
+	int i, flag;
 
 	if (head == NULL)
 		return (0);
 
-	for (i = 0; head != NULL; i++)
+	for (i = flag = 0; head != NULL || flag; i++)
 	{
 		printf("[%p] %d\n", (void *) head, head->n);
 
 		if (head <= head->next)
 		{
-			head = head->next;
-			printf("-> [%p] %d\n", (void *) head, head->n);
-			i++;
-			return (i);
+			flag = 1;
+			break;
 		}
 
 		head = head->next;
+		flag = 0;
 	}
+
+	if (flag)
+	{
+		head = head->next;
+		printf("-> [%p] %d\n", (void *) head, head->n);
+		i++;
+	}
+
 	return (i);
 }
