@@ -10,7 +10,7 @@ void print_error(char *msg, char *extra, int status);
  **/
 void print_and_close_fd(char *msg, char *extra, int status, int fd)
 {
-	if (fd1 > 0)
+	if (fd > 0)
 	{
 		close(fd);
 	}
