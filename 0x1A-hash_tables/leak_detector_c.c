@@ -175,6 +175,7 @@ void report_mem_leak(void)
 	FILE * fp_write = fopen (OUTPUT_FILE, "wt");
 	char info[1024];
 
+    (void)index;
 	if(fp_write != NULL)
 	{
 		sprintf(info, "%s\n", "Memory Leak Summary");
@@ -184,7 +185,7 @@ void report_mem_leak(void)
 		
 		for(leak_info = ptr_start; leak_info != NULL; leak_info = leak_info->next)
 		{
-			sprintf(info, "address : %d\n", leak_info->mem_info.address);
+			sprintf(info, "address : %p\n", leak_info->mem_info.address);
 			fwrite(info, (strlen(info) + 1) , 1, fp_write);
 			sprintf(info, "size    : %d bytes\n", leak_info->mem_info.size);			
 			fwrite(info, (strlen(info) + 1) , 1, fp_write);
